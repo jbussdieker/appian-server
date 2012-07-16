@@ -9,7 +9,7 @@ if [[ "x$COMMAND" == "xgit-upload-pack" ]] ||
 
 	echo "|| Welcome $GIT_USER..." >&2
 	echo "|| Command: $COMMAND..." >&2
-	$COMMAND $APPIAN_ROOT/repositories/$REPO
+	$COMMAND $APPIAN_ROOT/server/repositories/$REPO
 	echo "|| DONE!" >&2
 else
 	echo "|| UNKNOWN COMMAND $COMMAND" >&2
