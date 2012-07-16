@@ -1,0 +1,15 @@
+<%= form_for(@project, :html => {class: "well"}) do |f| %>
+  <% @project.errors.full_messages.each do |msg| %>
+    <div class="alert alert-error">
+      <a class="close" data-dismiss="alert">&#215;</a>
+      <%= content_tag :div, msg if msg.is_a?(String) %>
+    </div>
+  <% end %>
+
+  <div class="controls">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <%= f.submit %>
+<% end %>

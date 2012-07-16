@@ -5,6 +5,14 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-User.create(email: "jbussdieker@gmail.com", password: "password")
-User.create(email: "sam.merry@gmail.com", password: "password")
+git = RepositoryType.create(caption: "git")
 
+josh = User.create(name: "jbussdieker", email: "jbussdieker@gmail.com", password: "password")
+sam  = User.create(name: "sammerry", email: "sam.merry@gmail.com", password: "password")
+
+hapidocs = josh.projects.create(name: "HapiDocs")
+hapidocs.create_repository(
+  name: "Github", 
+  url: "git@github.com:jbussdieker/HapiDocs.git",
+  repository_type_id: git.id
+)
