@@ -13,3 +13,8 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+
+# Ignore db config, schema, and seeds
+/config/database.yml
+/db/schema.rb
+/db/seeds.rb
