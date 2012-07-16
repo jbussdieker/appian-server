@@ -1,5 +1,5 @@
 class Project < ActiveRecord::Base
-  attr_accessible :name, :user_id
+  attr_accessible :name, :description, :user_id
   before_create :create_job
   before_destroy :delete_job
 
